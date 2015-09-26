@@ -1,0 +1,80 @@
+Q(1): Do you want to find out whether you are potentially eligible for Social Security Disability Insurance (SSDI) benefits?
+A: Yes. 
+	Q(1.1): Do you have a physical or psychological condition, illness or injury that prevents you from working?
+	A: Yes. 
+		Q(1.1.1):GOTO:3
+	A: No.
+		Q(1.1.2): Do you have a physical or psychological condition, illness or injury that limits your ability to work?
+		A: Yes. 
+			Q(1.1.2.1):GOTO:4
+		A: No. 	
+			Q(1.1.2.2):GOTO:2
+A: No
+	Q(1.2): Thanks for stopping bye.  Have a delightful day. 
+Q(2): It appears that you may not be eligible for SSDI benefits.  However, we could be wrong, or you may be eligible for retirement benefits, Supplemental Security Income (SSI) benefits, or for SSDI on someone else's Social Security number. Please contact your local Social Security Administration office to verify whether or not you are eligible. 
+A:[https://secure.ssa.gov/ICON/main.jsp] How do I contact my local Social Security Administration office? 
+A: Okay, I know how to reach my local Social Security Administration office. 
+	Q(2.2): Great! Please contact your local Social Security Administration office to verify whether or not you are eligible.
+Q(3): Has your condition, illness or injury prevented you from working for one year or more? 
+A: Yes. 
+	Q(3.1):GOTO:5
+A: No.
+	Q(3.2): Is your condition, illness or injury expected to prevent you from working for one year or more? 
+	A: Yes. 
+		Q(3.2.1):GOTO:5
+	A: No. 
+		Q(3.2.2):GOTO:2
+Q(4): Are you blind? 
+A: Yes.
+	Q(4.1): Do you make $1,820 or less a month?
+	A: Yes.
+		Q(4.1.1):GOTO:5
+	A: No, I make more than that. 
+		Q(4.1.2):GOTO:2
+A: No
+	Q(4.2): Do you make $1,090 or less a month?
+	A: Yes
+		Q(4.2.1):GOTO:5
+	A: No, I make more than that. 
+		Q(4.2.2):GOTO:2
+
+Q(5): Do you have insured status with the Social Security Administration?
+A: I'm not sure. 
+	Q(5.1):GOTO:6
+A: Yes, I checked with the Social Security Administration in person, online or via telephone. 
+	Q(5.2):GOTO:7
+A: Yes, I recently received a statement in the mail from the Social Security Administration. 
+	Q(5.3):GOTO:7
+A: No. 
+	Q(5.4): Are you sure?
+	A: Yes, I am positive that I do not have insured status with the Social Security Administration. 
+		Q(5.4.1): Okay, you may be eligible for Supplemental Security Income (SSI) due to your condition, illness or injury. 
+		A: I do not have a disabling condition, illness or injury.
+			Q(5.4.1.1):GOTO:2
+		A: I want to find out whether I am eligible for SSI.
+			Q(5.4.1.2):GOTO:2
+	A: No. 
+		Q(5.4.2):GOTO:6
+Q(6): Have you worked five (5) out of the last ten (10) years? 
+A: Yes.
+	Q(6.1): Was that work for a municipality or other employer that did not have you pay FICA taxes due to a pension plan?
+	A: Yes.
+		Q(6.1.1): Did you work for another employer for which you did pay FICA taxes within the last five (5) out of the last ten (10) years?
+		A: Yes.
+			Q(6.1.1.1):GOTO:7
+		A: No.
+			Q(6.1.1.2):GOTO:2
+	A: No.
+		Q(6.1.2):GOTO:7
+A: No. 
+	Q(6.2): Were you under 31 years old when your disability began preventing you from working?
+	A: Yes, I was under 31 years old. 
+		Q(6.2.1): Have you ever worked in the past?
+		A: Yes.
+			Q(6.2.1.1):GOTO:7
+		A: No, I have never worked in my life.
+			Q(6.2.1.2):GOTO:2
+	A: No, I was older than 31 when my disability began preventing me from working.
+		Q(6.2.2):GOTO:2
+Q(7): It appears that you may be eligible for Social Security Disability Benefits.   Give us a call today and we can help you apply for Social Security Disability benefits!
+  
